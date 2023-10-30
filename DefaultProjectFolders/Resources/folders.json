@@ -1,0 +1,31 @@
+{
+	"Project": {
+	    "Animations": null,
+	    "Art": {
+	    	"Models": null,
+	    	"Materials": null,
+	    	"Textures": null,
+	    	"VFX": null
+	    },
+	    "Audios": null,
+	    "Fonts": null,
+		"Editor": null,
+		"Core": null,
+		"Scripts": {
+			"Data": null
+		},
+		"Prefabs": null,
+		"Scenes": null,
+		"Shaders": null,
+		"Tools": null
+	},
+	"Plugins": null,
+	"Resources": {
+		"Configs": null,
+		"Prefabs": null,
+		"Materials": null,
+		"Shaders": null,
+		"Textures": null
+	},
+	"StreamingAssets": null
+}
