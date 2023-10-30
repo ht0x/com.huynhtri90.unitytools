@@ -1,2 +1,2 @@
-# com.huynhtri90.tools
-Tools to setup projects
+# com.huynhtri90.unitytools
+Tools for unity projects
