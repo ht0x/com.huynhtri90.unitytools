@@ -1,13 +1,13 @@
 {
 	"name": "com.huynhtri90.unitytools",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"unity": "2021.3",
 	"author": {
-		"name": "Huynh Tri",
+		"name": "TriHD",
 		"email": "huynhdinh.tri90@gmail.com",
 		"url": ""
 	},
-	"displayName": "Huynh Tri's unity project tools",
+	"displayName": "TriHD's unity project tools",
 	"description": "Essential tools for unity projects. Contact: huynhdinh.tri90@gmail.com",
 	"dependencies": {
 	}
