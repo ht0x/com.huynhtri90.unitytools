@@ -1,14 +1,23 @@
 {
 	"name": "com.huynhtri90.unitytools",
 	"version": "1.2.0",
-	"unity": "2021.3",
-	"author": {
-		"name": "TriHD",
-		"email": "huynhdinh.tri90@gmail.com",
-		"url": ""
-	},
+	"unity": "2018.3",
+	"author": "TriHD",
 	"displayName": "TriHD's unity project tools",
-	"description": "Essential tools for unity projects. Contact: huynhdinh.tri90@gmail.com",
+	"description": "Essential tools for unity projects.",
+	"keywords": [
+   		"tool",
+   		"project",
+   		"editor",
+   		"setup",
+   		"template"
+  	],
+  	"category": "tool",
+	"repository": {
+    	"url": "https://github.com/ht0x/com.huynhtri90.unitytools.git",
+    	"type": "git",
+    	"revision": "371386cb178188c254a3f575f9745a4dbc3ade43"
+  	},
 	"dependencies": {
 	}
 }
