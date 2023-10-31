@@ -1,0 +1,62 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : MonoBehaviour
+{
+	#region ----- Variables ----
+        
+    #endregion
+        
+    #region ----- Properties -----
+        
+    #endregion
+    
+    #region ----- Unity Methods -----
+    
+    private void Awake()
+    {
+        #NOTRIM#
+    }
+
+    private void OnEnable()
+    {
+        #NOTRIM#            
+    }
+
+    private void Start()
+    {
+        #NOTRIM#        
+    }
+        
+    private void Update()
+    {
+        #NOTRIM#        
+    }
+
+    private void OnDisable()
+    {
+        #NOTRIM#            
+    }
+
+    private void OnDestroy()
+    {
+        #NOTRIM#            
+    }
+    
+    #endregion
+    
+    #region ----- Main Methods -----
+        
+    #endregion
+        
+    #region ----- Event Methods -----
+        
+    #endregion
+        
+    #region ----- Utility Methods -----
+        
+    #endregion
+}
+#ROOTNAMESPACEEND#

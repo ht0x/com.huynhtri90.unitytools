@@ -9,7 +9,7 @@ namespace HuynhTri
     {
     	#region ----- Variables ----
 
-        private const string FOLDERS_JSON_DATA_RESOURCE_FILE = "folders"; 
+        private const string FOLDERS_JSON_DATA_RESOURCE_FILE = "huynhtri90_default_folders"; 
         
         #endregion
         

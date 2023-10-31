@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using System;
+
+    #ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME#
+{
+	#region ----- Variables ----
+        
+    #endregion
+        
+    #region ----- Properties -----
+        
+    #endregion
+        
+    #region ----- Constructor -----
+        
+    public #SCRIPTNAME#()
+    {
+        #NOTRIM#
+    }
+        
+    #endregion
+    
+    #region ----- Main Methods -----
+        
+    #endregion
+        
+    #region ----- Event Methods -----
+        
+    #endregion
+        
+    #region ----- Utility Methods -----
+        
+    #endregion
+}
+#ROOTNAMESPACEEND#
