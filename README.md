@@ -1,6 +1,6 @@
 # Unity Project Tools
 
-## What is it ?
+## Description
 Essential tools for unity to speed up the process of project setup.
 
 ## Features
