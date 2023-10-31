@@ -20,7 +20,7 @@ Essential tools for unity to speed up the process of project setup.
 * On the top left corner, click plus icon and choose "Add package from git URL".
 * Enter git url: 
 ```
-"https://github.com/ht0x/com.huynhtri90.unitytools.git".
+https://github.com/ht0x/com.huynhtri90.unitytools.git
 ```
 * Wait until the package installation is complete.
 
