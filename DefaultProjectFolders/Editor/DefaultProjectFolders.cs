@@ -9,7 +9,7 @@ namespace HuynhTri
     {
     	#region ----- Variables ----
 
-        private const string FOLDERS_JSON_DATA_RESOURCE_FILE = "huynhtri90_default_folders"; 
+        private const string FOLDERS_JSON_DATA_RESOURCE_FILE = "trihd_default_folders"; 
         
         #endregion
         
@@ -22,7 +22,7 @@ namespace HuynhTri
             
             var rootPath = Application.dataPath;
             CreateDirectory(rootPath, data);
-            
+            AssetDatabase.Refresh();
             return true;
         }
 

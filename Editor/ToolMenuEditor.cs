@@ -20,8 +20,21 @@ namespace HuynhTri
 
             EditorUtility.DisplayDialog("Create default project folders",
                 "Done!", "Ok");
-            
-            AssetDatabase.Refresh();
+        }
+        
+        #endregion
+        
+        #region ----- Custom Script Templates -----
+
+        [MenuItem("Tools/TriHD/Setup Project/Update script templates")]
+        static void UpdateScriptTemplates()
+        {
+            EditorUtility.DisplayProgressBar("Update script templates", "Updating", 1f);
+            var result = CustomScriptTemplates.UpdateTemplates();
+            EditorUtility.ClearProgressBar();
+
+            var msg = result ? "Done!" : "Can't update script templates. Please see console.";
+            EditorUtility.DisplayDialog("Update script templates", msg, "Ok");
         }
         
         #endregion
@@ -45,18 +58,6 @@ namespace HuynhTri
         #endregion
         
         #region ----- Install Package (Unity) -----
-        
-        // [MenuItem("Tools/TriHD/Install Package/DoTween")]
-        // static void InstallDoTween()
-        // {
-        //     
-        // }
-        //
-        // [MenuItem("Tools/TriHD/Install Package/UniTask")]
-        // static void InstallUniTask()
-        // {
-        //     
-        // }
         
         [MenuItem("Tools/TriHD/Install Package/Unity New Input System")]
         static async Task InstallUnityInputSystem()
