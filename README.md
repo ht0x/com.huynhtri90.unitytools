@@ -1,9 +1,9 @@
 # Unity Project Tools
 
 ## What is it ?
-Essential tools for unity projects to speed up the process of project setup.
+Essential tools for unity to speed up the process of project setup.
 
-##Features
+## Features
 * Setup default project folders.
 * Load custom project manifest.
 * Automate package installation.
@@ -23,7 +23,6 @@ Essential tools for unity projects to speed up the process of project setup.
 "https://github.com/ht0x/com.huynhtri90.unitytools.git".
 ```
 * Wait until the package installation is complete.
-
 
 ## Usage
 * In unity menu bar, click Tools to choose drop-down features
