@@ -12,6 +12,7 @@ public static class PackageInstallation
 
 	private const string GIT_GIST_FRONT_END_PROTOCOL = "https";
 	private const string GIT_GIST_BASE_ADDRESS = "gist.github.com";
+	private const string GIT_GIST_RAW_END_POINT = "raw";
 	private static readonly string PROJECT_MANIFEST_JSON_PATH = Path.Combine(Application.dataPath, "../Packages/manifest.json");
 	
     #endregion
@@ -71,7 +72,7 @@ public static class PackageInstallation
     
     static string GetGistUrl(string user, string id)
     {
-	    return GIT_GIST_FRONT_END_PROTOCOL + "://" + GIT_GIST_BASE_ADDRESS + "/" + user + "/" + id;
+	    return GIT_GIST_FRONT_END_PROTOCOL + "://" + GIT_GIST_BASE_ADDRESS + "/" + user + "/" + id + "/" + GIT_GIST_RAW_END_POINT;
     }
     
     #endregion
