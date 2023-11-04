@@ -1,6 +1,6 @@
 {
 	"name": "com.huynhtri90.unitytools",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"unity": "2018.3",
 	"author": "TriHD",
 	"displayName": "TriHD's unity project tools",
@@ -16,7 +16,7 @@
 	"repository": {
     	"url": "https://github.com/ht0x/com.huynhtri90.unitytools.git",
     	"type": "git",
-    	"revision": "60f068f86cd0c496a95bc6c96029b437507e553e"
+    	"revision": "7d91acfea186d660b0316945ee1c9b00ab02185a"
   	},
 	"dependencies": {
 	}
