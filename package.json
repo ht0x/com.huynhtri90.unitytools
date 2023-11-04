@@ -16,7 +16,7 @@
 	"repository": {
     	"url": "https://github.com/ht0x/com.huynhtri90.unitytools.git",
     	"type": "git",
-    	"revision": "b5303cafaab42bfda000cc3d13d32e3f11d2a338"
+    	"revision": "60f068f86cd0c496a95bc6c96029b437507e553e"
   	},
 	"dependencies": {
 	}
