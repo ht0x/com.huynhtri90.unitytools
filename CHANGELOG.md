@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.2.2] - 14-11-2023
+CHANGES
+- Update loading 2d urp project manifest with unity version 
+
+## [1.2.1] - 14-11-2023
+CHANGES
+- Update script templates
+
 ## [1.2.0] - 31-10-2023
 NEW FEATURES
 - Add new setup tool: Custom Script Template 

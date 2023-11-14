@@ -9,7 +9,7 @@ namespace HuynhTri
     {
     	#region ----- Variables ----
 
-        private const string FOLDERS_JSON_DATA_RESOURCE_FILE = "trihd_default_folders"; 
+        private const string FOLDERS_JSON_DATA_RESOURCE_FILE_NAME = "trihd_default_folders"; 
         
         #endregion
         
@@ -47,10 +47,10 @@ namespace HuynhTri
 
         private static Dictionary<string, object> LoadFoldersJsonData()
         {
-            var textAsset = Resources.Load<TextAsset>(FOLDERS_JSON_DATA_RESOURCE_FILE);
+            var textAsset = Resources.Load<TextAsset>(FOLDERS_JSON_DATA_RESOURCE_FILE_NAME);
             if (textAsset == null)
             {
-                Debug.LogError($"[DefaultProjectFolders-LoadFoldersJsonData] Error! Can't file json data file with name: {FOLDERS_JSON_DATA_RESOURCE_FILE}");
+                Debug.LogError($"[DefaultProjectFolders-LoadFoldersJsonData] Error! Can't file json data file with name: {FOLDERS_JSON_DATA_RESOURCE_FILE_NAME}");
                 return null;
             }
 
