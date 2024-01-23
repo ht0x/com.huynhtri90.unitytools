@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.2.3] - 24-01-2024
+CHANGES
+- Update tool configs
+
 ## [1.2.2] - 14-11-2023
 CHANGES
 - Update loading 2d urp project manifest with unity version 
