@@ -53,14 +53,6 @@ namespace HuynhTri
 
 		#region ----- Variables ----
 
-		private const string PACKAGE_INSTALLATION_JSON_DATA_RESOURCE_FILE_NAME = "trihd_package_installation";
-		private const string GIT_GIST_FRONT_END_PROTOCOL = "https";
-		private const string GIT_GIST_BASE_ADDRESS = "gist.github.com";
-		private const string GIT_GIST_RAW_END_POINT = "raw";
-
-		private static readonly string PROJECT_MANIFEST_JSON_PATH =
-			Path.Combine(Application.dataPath, "../Packages/manifest.json");
-
 		private static PackageData packageData;
 
 		#endregion
@@ -95,7 +87,7 @@ namespace HuynhTri
 			if (string.IsNullOrEmpty(packageJsonContent))
 				return false;
 			
-			ReplacePackageFile(PROJECT_MANIFEST_JSON_PATH, packageJsonContent);
+			ReplacePackageFile(PackageInstallationConfig.PROJECT_MANIFEST_JSON_PATH, packageJsonContent);
 			return true;
 		}
 
@@ -107,11 +99,11 @@ namespace HuynhTri
 
 		static bool LoadPackageData()
 		{
-			var textAsset = Resources.Load<TextAsset>(PACKAGE_INSTALLATION_JSON_DATA_RESOURCE_FILE_NAME);
+			var textAsset = Resources.Load<TextAsset>(PackageInstallationConfig.PACKAGE_INSTALLATION_JSON_DATA_RESOURCE_FILE_NAME);
 			if (textAsset == null)
 			{
 				Debug.LogError($"[PackageInstallation-LoadPackageData] Can't load package installation json data with path: " +
-				               $"{PACKAGE_INSTALLATION_JSON_DATA_RESOURCE_FILE_NAME}");
+				               $"{PackageInstallationConfig.PACKAGE_INSTALLATION_JSON_DATA_RESOURCE_FILE_NAME}");
 				return false;
 			}
 
@@ -147,8 +139,8 @@ namespace HuynhTri
 
 		static string GetGistUrl(string user, string id)
 		{
-			return GIT_GIST_FRONT_END_PROTOCOL + "://" + GIT_GIST_BASE_ADDRESS + "/" + user + "/" + id + "/" +
-			       GIT_GIST_RAW_END_POINT;
+			return PackageInstallationConfig.GIT_GIST_FRONT_END_PROTOCOL + "://" + PackageInstallationConfig.GIT_GIST_BASE_ADDRESS + "/" + user + "/" + id + "/" +
+			       PackageInstallationConfig.GIT_GIST_RAW_END_POINT;
 		}
 
 		#endregion

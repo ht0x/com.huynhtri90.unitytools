@@ -7,23 +7,19 @@ namespace HuynhTri
 	public static class CustomScriptTemplates
 	{
 		#region ----- Variables ----
-
-		private const string ASSET_SCRIPT_TEMPLATES_FOLDER_NAME = "ScriptTemplates";
-		private const string SCRIPT_TEMPLATES_POOL_RESOURCES_PATH = "trihd_script_templates";
-
+		
 		#endregion
 
 		#region ----- Main Methods -----
 
 		public static bool UpdateTemplates()
 		{
-			var path = Path.Combine(Application.dataPath, ASSET_SCRIPT_TEMPLATES_FOLDER_NAME);
+			var path = Path.Combine(Application.dataPath, ScriptTemplatesConfig.ASSET_SCRIPT_TEMPLATES_FOLDER_NAME);
 			CreateTemplateFolder(path);
-			var templatePaths = GetTemplatesPaths(SCRIPT_TEMPLATES_POOL_RESOURCES_PATH);
+			var templatePaths = GetTemplatesPaths(ScriptTemplatesConfig.SCRIPT_TEMPLATES_POOL_RESOURCES_PATH);
 			if (templatePaths == null)
 			{
-				Debug.Log(
-					$"[CustomScriptTemplates-UpdateTemplates] Templates pool is null or empty with resource path: {SCRIPT_TEMPLATES_POOL_RESOURCES_PATH}");
+				Debug.Log($"[CustomScriptTemplates-UpdateTemplates] Templates pool is null or empty with resource path: {ScriptTemplatesConfig.SCRIPT_TEMPLATES_POOL_RESOURCES_PATH}");
 				return false;
 			}
 
@@ -59,8 +55,7 @@ namespace HuynhTri
 					.Replace(Application.dataPath, "Assets");
 
 				if (!AssetDatabase.CopyAsset(templatePath, newLocation))
-					Debug.LogError(
-						$"[CustomScriptTemplate-CopyTemplatesToLocation] Can't copy asset with path: {templatePath}\nDestination: {newLocation}");
+					Debug.LogError($"[CustomScriptTemplate-CopyTemplatesToLocation] Can't copy asset with path: {templatePath}\nDestination: {newLocation}");
 			}
 		}
 
