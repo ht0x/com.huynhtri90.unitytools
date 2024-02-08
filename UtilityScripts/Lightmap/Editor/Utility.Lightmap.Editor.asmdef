@@ -1,0 +1,19 @@
+{
+    "name": "Utility.Lightmap.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b4d333eb97f44407c90ad483f426da19",
+        "GUID:c5b8bfe3a2e934923b2edf86ded59a23"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
