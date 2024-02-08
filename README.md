@@ -8,6 +8,8 @@ Essential tools for unity to speed up the process of project setup.
 * Load custom project manifest.
 * Automate package installation.
 * Update script templates.
+* Utility scripts (mini json, enum, user cache, network helper, extension methods, ui, gameobject, maths, random, datetime...)
+* Object pooling 
 
 ## Installation
 
@@ -26,3 +28,4 @@ https://github.com/ht0x/com.huynhtri90.unitytools.git
 
 ## Usage
 * In unity menu bar, click Tools to choose drop-down features
+* Some features (utility scripts, object pooling,....) are ready to use and no action required.

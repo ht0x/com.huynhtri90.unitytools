@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.3.0] - 08-02-2024
+NEW FEATURES
+- Add utility scripts 
+- Add object pooling system 
+
 ## [1.2.3] - 24-01-2024
 CHANGES
 - Update tool configs
