@@ -10,6 +10,13 @@ Essential tools for unity to speed up the process of project setup.
 * Update script templates.
 * Utility scripts (mini json, enum, user cache, network helper, extension methods, ui, gameobject, maths, random, datetime...)
 * Object pooling 
+* Essential plugins from asset store including:
+  + Asset Usage Detector
+  + Build Report
+  + DoTween
+  + Simple Scroll-Snap
+  + More Effective Coroutine (MEC)
+  + UniRX
 
 ## Installation
 

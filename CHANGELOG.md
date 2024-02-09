@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.4.0] - 09-02-2024
+NEW FEATURES
+- Add essential plugins from asset store including:
+   + Asset Usage Detector
+   + Build Report
+   + DoTween
+   + Simple Scroll-Snap
+   + More Effective Coroutine (MEC)
+   + UniRX
+- Update package installation (add UniTask option)
+
 ## [1.3.0] - 08-02-2024
 NEW FEATURES
 - Add utility scripts 

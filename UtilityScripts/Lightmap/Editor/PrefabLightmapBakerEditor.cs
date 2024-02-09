@@ -8,7 +8,7 @@ public class PrefabLightmapBakerEditor : Editor
 {
     private static GameObject[] selectedPrefabs;
     
-    [MenuItem("RKStudio/Lightmap/Bake Prefab Lightmaps")]
+    [MenuItem("Tools/TriHD/Lightmap/Bake Prefab Lightmaps")]
     static void GenerateLightmapInfo()
     {
         selectedPrefabs = GetSelectedPrefabs();

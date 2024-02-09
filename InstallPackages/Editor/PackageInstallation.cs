@@ -59,19 +59,31 @@ namespace HuynhTri
 
 		#region ----- Main Methods -----
 
-		public static async Task<bool> InstallPackage(string packageName)
+		private static async Task<bool> InstallPackage(string fullPackageName)
 		{
-			var addRequest = Client.Add($"com.unity.{packageName}");
+			var addRequest = Client.Add(fullPackageName);
 			while (!addRequest.IsCompleted || addRequest.Status == StatusCode.InProgress)
 				await Task.Yield();
 
 			var result = addRequest.Status == StatusCode.Success;
 			if (!result)
-				Debug.LogError($"[PackageInstallation-InstallPackage] Unable to install package name: {packageName}." +
+				Debug.LogError($"[PackageInstallation-InstallPackage] Unable to install package name: {fullPackageName}." +
 				               $"\nStatus code: {addRequest.Status}" +
 				               $"\nError code: {addRequest.Error.errorCode}" +
 				               $"\nError msg: {addRequest.Error.message}");
 
+			return result;
+		}
+		
+		public static async Task<bool> InstallUnityPackage(string packageName)
+		{
+			var result = await InstallPackage($"com.unity.{packageName}");
+			return result;
+		}
+		
+		public static async Task<bool> InstallExternalPackage(string packageName)
+		{
+			var result = await InstallPackage(packageName);
 			return result;
 		}
 

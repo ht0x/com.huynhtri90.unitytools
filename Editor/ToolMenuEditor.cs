@@ -55,17 +55,87 @@ namespace HuynhTri
         
         #endregion
         
-        #region ----- Install Package (Unity) -----
+        #region ----- Install Registry Package (Unity) -----
+        
+        [MenuItem("Tools/TriHD/Install Package/JetBrain Rider Editor")]
+        static async Task InstallJetBrainRiderEditor()
+        {
+            EditorUtility.DisplayProgressBar("Install JetBrain Rider Editor", "Installing", 1f);
+            var result = await PackageInstallation.InstallUnityPackage("ide.rider");
+            EditorUtility.ClearProgressBar();
+            
+            var msg = result ? "Done!" : "Can't install JetBrain Rider Editor. Please see console.";
+            EditorUtility.DisplayDialog("Install JetBrain Rider Editor", msg, "Ok");
+        }
         
         [MenuItem("Tools/TriHD/Install Package/Unity New Input System")]
         static async Task InstallUnityInputSystem()
         {
             EditorUtility.DisplayProgressBar("Install unity new input system", "Installing", 1f);
-            var result = await PackageInstallation.InstallPackage("inputsystem");
+            var result = await PackageInstallation.InstallUnityPackage("inputsystem");
             EditorUtility.ClearProgressBar();
             
             var msg = result ? "Done!" : "Can't install unity new input system. Please see console.";
             EditorUtility.DisplayDialog("Install unity new input system", msg, "Ok");
+        }
+        
+        [MenuItem("Tools/TriHD/Install Package/FBX Exporter")]
+        static async Task InstallFBXExporter()
+        {
+            EditorUtility.DisplayProgressBar("Install FBX Exporter", "Installing", 1f);
+            var result = await PackageInstallation.InstallUnityPackage("formats.fbx");
+            EditorUtility.ClearProgressBar();
+            
+            var msg = result ? "Done!" : "Can't install FBX Exporter. Please see console.";
+            EditorUtility.DisplayDialog("Install FBX Exporter", msg, "Ok");
+        }
+        
+        [MenuItem("Tools/TriHD/Install Package/AR Bundles")]
+        static async Task InstallARBundles()
+        {
+            EditorUtility.DisplayProgressBar("Install AR bundles", "Installing", 1f);
+            var result = await PackageInstallation.InstallUnityPackage("feature.ar");
+            EditorUtility.ClearProgressBar();
+            
+            var msg = result ? "Done!" : "Can't install AR bundles. Please see console.";
+            EditorUtility.DisplayDialog("Install AR bundles", msg, "Ok");
+        }
+        
+        [MenuItem("Tools/TriHD/Install Package/VR Bundles")]
+        static async Task InstallVRBundles()
+        {
+            EditorUtility.DisplayProgressBar("Install VR bundles", "Installing", 1f);
+            var result = await PackageInstallation.InstallUnityPackage("feature.vr");
+            EditorUtility.ClearProgressBar();
+            
+            var msg = result ? "Done!" : "Can't install VR bundles. Please see console.";
+            EditorUtility.DisplayDialog("Install VR bundles", msg, "Ok");
+        }
+        
+        [MenuItem("Tools/TriHD/Install Package/Addressables")]
+        static async Task InstallAddressables()
+        {
+            EditorUtility.DisplayProgressBar("Install Addressables", "Installing", 1f);
+            var result = await PackageInstallation.InstallUnityPackage("addressables");
+            EditorUtility.ClearProgressBar();
+            
+            var msg = result ? "Done!" : "Can't install Addressables. Please see console.";
+            EditorUtility.DisplayDialog("Install Addressables", msg, "Ok");
+        }
+        
+        #endregion
+        
+        #region ----- Install External Package -----
+        
+        [MenuItem("Tools/TriHD/Install Package/UniTask")]
+        static async Task InstallUniTask()
+        {
+            EditorUtility.DisplayProgressBar("Install UniTask", "Installing", 1f);
+            var result = await PackageInstallation.InstallExternalPackage("com.cysharp.unitask");
+            EditorUtility.ClearProgressBar();
+            
+            var msg = result ? "Done!" : "Can't install UniTask. Please see console.";
+            EditorUtility.DisplayDialog("Install UniTask", msg, "Ok");
         }
         
         #endregion
