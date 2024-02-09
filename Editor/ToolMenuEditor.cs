@@ -61,7 +61,7 @@ namespace HuynhTri
         static async Task InstallJetBrainRiderEditor()
         {
             EditorUtility.DisplayProgressBar("Install JetBrain Rider Editor", "Installing", 1f);
-            var result = await PackageInstallation.InstallUnityPackage("ide.rider");
+            var result = await PackageInstallation.InstallPackage("ide.rider");
             EditorUtility.ClearProgressBar();
             
             var msg = result ? "Done!" : "Can't install JetBrain Rider Editor. Please see console.";
@@ -72,7 +72,7 @@ namespace HuynhTri
         static async Task InstallUnityInputSystem()
         {
             EditorUtility.DisplayProgressBar("Install unity new input system", "Installing", 1f);
-            var result = await PackageInstallation.InstallUnityPackage("inputsystem");
+            var result = await PackageInstallation.InstallPackage("inputsystem");
             EditorUtility.ClearProgressBar();
             
             var msg = result ? "Done!" : "Can't install unity new input system. Please see console.";
@@ -83,7 +83,7 @@ namespace HuynhTri
         static async Task InstallFBXExporter()
         {
             EditorUtility.DisplayProgressBar("Install FBX Exporter", "Installing", 1f);
-            var result = await PackageInstallation.InstallUnityPackage("formats.fbx");
+            var result = await PackageInstallation.InstallPackage("formats.fbx");
             EditorUtility.ClearProgressBar();
             
             var msg = result ? "Done!" : "Can't install FBX Exporter. Please see console.";
@@ -94,7 +94,7 @@ namespace HuynhTri
         static async Task InstallARBundles()
         {
             EditorUtility.DisplayProgressBar("Install AR bundles", "Installing", 1f);
-            var result = await PackageInstallation.InstallUnityPackage("feature.ar");
+            var result = await PackageInstallation.InstallPackage("feature.ar");
             EditorUtility.ClearProgressBar();
             
             var msg = result ? "Done!" : "Can't install AR bundles. Please see console.";
@@ -105,7 +105,7 @@ namespace HuynhTri
         static async Task InstallVRBundles()
         {
             EditorUtility.DisplayProgressBar("Install VR bundles", "Installing", 1f);
-            var result = await PackageInstallation.InstallUnityPackage("feature.vr");
+            var result = await PackageInstallation.InstallPackage("feature.vr");
             EditorUtility.ClearProgressBar();
             
             var msg = result ? "Done!" : "Can't install VR bundles. Please see console.";
@@ -116,26 +116,11 @@ namespace HuynhTri
         static async Task InstallAddressables()
         {
             EditorUtility.DisplayProgressBar("Install Addressables", "Installing", 1f);
-            var result = await PackageInstallation.InstallUnityPackage("addressables");
+            var result = await PackageInstallation.InstallPackage("addressables");
             EditorUtility.ClearProgressBar();
             
             var msg = result ? "Done!" : "Can't install Addressables. Please see console.";
             EditorUtility.DisplayDialog("Install Addressables", msg, "Ok");
-        }
-        
-        #endregion
-        
-        #region ----- Install External Package -----
-        
-        [MenuItem("Tools/TriHD/Install Package/UniTask")]
-        static async Task InstallUniTask()
-        {
-            EditorUtility.DisplayProgressBar("Install UniTask", "Installing", 1f);
-            var result = await PackageInstallation.InstallExternalPackage("com.cysharp.unitask");
-            EditorUtility.ClearProgressBar();
-            
-            var msg = result ? "Done!" : "Can't install UniTask. Please see console.";
-            EditorUtility.DisplayDialog("Install UniTask", msg, "Ok");
         }
         
         #endregion

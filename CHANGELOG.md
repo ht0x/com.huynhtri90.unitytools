@@ -10,7 +10,6 @@ NEW FEATURES
    + Simple Scroll-Snap
    + More Effective Coroutine (MEC)
    + UniRX
-- Update package installation (add UniTask option)
 
 ## [1.3.0] - 08-02-2024
 NEW FEATURES
