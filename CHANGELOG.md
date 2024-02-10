@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.4.1] - 10-02-2024
+CHANGES
+- Update adding more script templates
+   + Struct, Enum and ScriptableObject scripts
+   + Editor scripts (editor, editor window and editor drawer)
+   + Text files (json, text, xml, markdown, package manifest)
+   + Assembly Definition for editor and test
+
 ## [1.4.0] - 09-02-2024
 NEW FEATURES
 - Add essential plugins from asset store including:
