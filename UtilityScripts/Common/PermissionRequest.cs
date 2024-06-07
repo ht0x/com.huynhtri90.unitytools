@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_ANDROID
 using UnityEngine.Android;
-#if UNITY_IOS
+#elif UNITY_IOS
 using UnityEngine.iOS;
 #endif
 
 public class PermissionRequest : SingletonMonobehaviour<PermissionRequest>
 {
+#if UNITY_ANDROID
     private const string CAMERA_PERMISSION = Permission.Camera;
     private const string MICROPHONE_PERMISSION = Permission.Microphone;
+#endif
 
     protected override void Awake()
     {
