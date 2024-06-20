@@ -1,10 +1,12 @@
 {
-    "name": "ObjectPooling",
+    "name": "ht0x.InstallPackages",
     "rootNamespace": "",
     "references": [
         "GUID:c5b8bfe3a2e934923b2edf86ded59a23"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

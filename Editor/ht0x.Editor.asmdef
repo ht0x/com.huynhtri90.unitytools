@@ -1,0 +1,21 @@
+{
+    "name": "ht0x.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0b90e76bdfdff4be48557caaf0840757",
+        "GUID:8fd8e790595b145dfb5798e93f30d5f2",
+        "GUID:75950aea020004e26a873178e5f6e3b2",
+        "GUID:c5b8bfe3a2e934923b2edf86ded59a23"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,10 +1,10 @@
 {
-    "name": "TriHD.UnityTools",
+    "name": "ht0x.ObjectPooling",
     "rootNamespace": "",
-    "references": ["GUID:029025e1205b66b4c8a934409337eed0"],
-    "includePlatforms": [
-        "Editor"
+    "references": [
+        "GUID:c5b8bfe3a2e934923b2edf86ded59a23"
     ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
