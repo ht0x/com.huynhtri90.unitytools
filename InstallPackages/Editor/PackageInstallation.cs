@@ -81,12 +81,21 @@ namespace HuynhTri
 			{
 				if (!LoadPackageData()) return false;
 			}
-			
-			var gistUrl = GetGistUrl(packageData?.GitUsername, packageData?.GetGistId(Application.unityVersion));
+
+			var curUnityVersion = Application.unityVersion;
+			var gistId = packageData?.GetGistId(curUnityVersion);
+			if (string.IsNullOrEmpty(gistId))
+			{
+				Debug.LogError(
+					$"[PackageInstallation-LoadProjectManifestFromGist] Unity version {curUnityVersion} not supported.");
+				return false;
+			}
+
+			var gistUrl = GetGistUrl(packageData?.GitUsername, gistId);
 			var packageJsonContent = await GetPackageJsonContent(gistUrl);
 			if (string.IsNullOrEmpty(packageJsonContent))
 				return false;
-			
+
 			ReplacePackageFile(PackageInstallationConfig.PROJECT_MANIFEST_JSON_PATH, packageJsonContent);
 			return true;
 		}
