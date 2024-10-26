@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.4.4] - 26-10-2024
+CHANGES
+- Fix the error of not supported unity version for loading project manifest
+
 ## [1.4.3] - 20-06-2024
 CHANGES
 - Organize all assembly definitions
