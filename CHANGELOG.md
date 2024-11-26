@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.4.5] - 26-11-2024
+CHANGES
+- Update float parser method with culture info parameter in extension methods script
+
 ## [1.4.4] - 26-10-2024
 CHANGES
 - Fix the error of not supported unity version for loading project manifest

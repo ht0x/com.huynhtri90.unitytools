@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using UnityEngine;
 
 public static class ExtensionMethods
 {
-    public static Vector4 Parse(this Vector4 v4, string data)
+    public static Vector4 Parse(this Vector4 v4, string data, CultureInfo cultureInfo = null)
     {
         if (data != null)
         {
@@ -14,10 +15,10 @@ public static class ExtensionMethods
 
             string[] temp = data.Split(',');
 
-            float xPos = float.Parse(temp[0]);
-            float yPos = float.Parse(temp[1]);
-            float zPos = float.Parse(temp[2]);
-            float tPos = float.Parse(temp[3]);
+            float xPos = float.Parse(temp[0], cultureInfo ?? CultureInfo.InvariantCulture);
+            float yPos = float.Parse(temp[1], cultureInfo ?? CultureInfo.InvariantCulture);
+            float zPos = float.Parse(temp[2], cultureInfo ?? CultureInfo.InvariantCulture);
+            float tPos = float.Parse(temp[3], cultureInfo ?? CultureInfo.InvariantCulture);
 
             return new Vector4(xPos, yPos, zPos, tPos);
         }
@@ -25,7 +26,7 @@ public static class ExtensionMethods
         return Vector4.zero;
     }
 
-    public static Vector3 Parse(this Vector3 v3, string data)
+    public static Vector3 Parse(this Vector3 v3, string data, CultureInfo cultureInfo = null)
     {
         if (data != null)
         {
@@ -33,16 +34,17 @@ public static class ExtensionMethods
 
             string[] temp = data.Split(',');
 
-            float xPos = float.Parse(temp[0]);
-            float yPos = float.Parse(temp[1]);
-            float zPos = float.Parse(temp[2]);
+            float xPos = float.Parse(temp[0], cultureInfo ?? CultureInfo.InvariantCulture);
+            float yPos = float.Parse(temp[1], cultureInfo ?? CultureInfo.InvariantCulture);
+            float zPos = float.Parse(temp[2], cultureInfo ?? CultureInfo.InvariantCulture);
 
             return new Vector3(xPos, yPos, zPos);
         }
 
         return default;
     }
-    public static bool TryParse(this string data, out Vector3 v3)
+    
+    public static bool TryParse(this string data, out Vector3 v3, CultureInfo cultureInfo = null)
     {
         v3 = default;
 
@@ -52,9 +54,9 @@ public static class ExtensionMethods
 
             string[] temp = data.Split(',');
 
-            float xPos = float.Parse(temp[0]);
-            float yPos = float.Parse(temp[1]);
-            float zPos = float.Parse(temp[2]);
+            float xPos = float.Parse(temp[0], cultureInfo ?? CultureInfo.InvariantCulture);
+            float yPos = float.Parse(temp[1], cultureInfo ?? CultureInfo.InvariantCulture);
+            float zPos = float.Parse(temp[2], cultureInfo ?? CultureInfo.InvariantCulture);
 
             v3 = new Vector3(xPos, yPos, zPos);
             return true;
@@ -92,7 +94,7 @@ public static class ExtensionMethods
         trans.name = trans.name.Replace("(Clone)", string.Empty);
     }
 
-    public static Vector2 Parse(this Vector2 v2, string data)
+    public static Vector2 Parse(this Vector2 v2, string data, CultureInfo cultureInfo = null)
     {
         if (data != null)
         {
@@ -100,8 +102,8 @@ public static class ExtensionMethods
 
             string[] temp = data.Split(',');
 
-            float xPos = float.Parse(temp[0]);
-            float yPos = float.Parse(temp[1]);
+            float xPos = float.Parse(temp[0], cultureInfo ?? CultureInfo.InvariantCulture);
+            float yPos = float.Parse(temp[1], cultureInfo ?? CultureInfo.InvariantCulture);
 
             return new Vector2(xPos, yPos);
         }
@@ -204,6 +206,7 @@ public static class ExtensionMethods
             list.AddRange(Enumerable.Repeat(c, sz - cur));
         }
     }
+    
     public static void Resize<T>(this List<T> list, int sz) where T : new()
     {
         Resize(list, sz, new T());
